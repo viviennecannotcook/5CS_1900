@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Profile Form</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+    }
+
+    .profile-card {
+      background: #ffffff;
+      width: 380px;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+    }
+
+    .profile-header {
+      background: #f4f6ff;
+      padding: 24px;
+      text-align: center;
+    }
+
+    .profile-image {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #667eea;
+      margin-bottom: 12px;
+    }
+
+    .profile-header h2 {
+      margin: 0;
+      font-size: 20px;
+      color: #333;
+    }
+
+    .profile-header p {
+      margin: 6px 0 0;
+      font-size: 14px;
+      color: #777;
+    }
+
+    form {
+      padding: 24px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 13px;
+      color: #555;
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      font-size: 14px;
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: #667eea;
+    }
+
+    .form-group textarea {
+      resize: none;
+      height: 80px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .actions button {
+      flex: 1;
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .btn-save {
+      background: #667eea;
+      color: #fff;
+    }
+
+    .btn-reset {
+      background: #f1f1f1;
+      color: #333;
+    }
+
+    .btn-save:hover {
+      background: #5a6fdc;
+    }
+
+    .btn-reset:hover {
+      background: #e6e6e6;
+    }
+  </style>
+</head>
+<body>
+  <div class="profile-card">
+    <div class="profile-header">
+      <img
+        src="hsulinnlaepout.jpg"
+        alt="Profile Image"
+        class="profile-image"
+      />
+      <h2>User Profile</h2>
+      <p>Edit your personal information</p>
+    </div>
+
+    <form>
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Enter your name" />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" />
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" placeholder="Enter your phone number" />
+      </div>
+
+      <div class="form-group">
+        <label for="bio">Bio</label>
+        <textarea id="bio" placeholder="Tell us about yourself"></textarea>
+      </div>
+
+      <div class="actions">
+        <button type="submit" class="btn-save">Save Profile</button>
+        <button type="reset" class="btn-reset">Reset</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
